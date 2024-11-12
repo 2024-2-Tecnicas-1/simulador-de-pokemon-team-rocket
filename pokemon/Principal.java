@@ -16,6 +16,6 @@ import static com.mycompany.pokemon.TipoPokemon.Fuego;
 public class Principal {
 
     public static void main(String[] args) {
-       Fuego Charmander= new Fuego("Charmander",39,52,Fuego,Ninguno);
+        
     }
 }
