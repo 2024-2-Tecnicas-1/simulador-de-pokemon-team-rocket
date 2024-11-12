@@ -1,4 +1,4 @@
-public class Acero {
+public class Acero extends Pokemon {
     public Acero(String Nombre, int Salud, int puntosataque, TipoPokemon tipo, Estados estado) {
         super(Nombre, Salud, puntosataque, tipo, estado);
     }

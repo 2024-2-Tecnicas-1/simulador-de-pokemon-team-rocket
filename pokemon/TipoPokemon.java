@@ -1,16 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.pokemon;
-
-/**
- *
- * @author Dylan
- */
+import java.util.EnumMap;
+import java.util.Map;
 public enum TipoPokemon  {
-     Ninguno,
-    Fuego,
+    Fuego, 
     Planta,
     Agua,
     Bicho,
@@ -24,8 +15,29 @@ public enum TipoPokemon  {
     Siniestro,
     Veneno,
     Volador,
-    Psíquico,
+    Psiquico,
     Acero,
     Fantasma,
-    Tierra
+    Tierra  
 }
+public class EfectividadTipos {
+    private static final Map<TipoPokemon, Map<TipoPokemon, Double>> efectividad;
+
+    static {
+        efectividad = new EnumMap<>(TipoPokemon.class);
+        
+
+        ///EFECTIVIDAD PARA CADA TIPO DE ATAQUE ///---
+        
+        efectividad.put(TipoPokemon.Acero, map.of(
+            TipoPokemon.Hada, 2.0,
+            TipoPokemon.Hielo, 2.0,
+            TipoPokemon.Roca, 2.0,
+            TipoPokemon.Acero, 0.5,
+            TipoPokemon.Agua, 0.5,
+            TipoPokemon.Electrico, 0.5,
+            TipoPokemon.Fuego, 0.5
+        ));
+    }
+}
+

@@ -1,4 +1,4 @@
-public class Hada {
+public class Hada extends Pokemon{
     public Hada(String Nombre, int Salud, int puntosataque, TipoPokemon tipo, Estados estado) {
         super(Nombre, Salud, puntosataque, tipo, estado);
     }
