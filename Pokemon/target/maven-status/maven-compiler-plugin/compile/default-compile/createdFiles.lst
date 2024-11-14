@@ -1,0 +1,9 @@
+com\mycompany\pokemon\Estados.class
+com\mycompany\pokemon\Batalla.class
+com\mycompany\pokemon\Entrenador.class
+com\mycompany\pokemon\Pokemon.class
+com\mycompany\pokemon\TiposPokemon\Agua.class
+com\mycompany\pokemon\TiposPokemon\Fuego.class
+com\mycompany\pokemon\Principal.class
+com\mycompany\pokemon\TipoPokemon.class
+com\mycompany\pokemon\EfectividadTipos.class
