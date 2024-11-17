@@ -1,11 +1,26 @@
 package simulador;
 
+import simulador.batalla.Batalla;
+import simulador.entrenador.Entrenador;
 import simulador.pokemon.*;
+import simulador.pokemones.charmander;
+
 
 public class Principal {
     public static void main(String[] args) {
-      //Nombre HP Atk Def SP.Atk Sp.Def Vel Tipo1 Tipo2 Estado
-      //Pokemon Charmander = new Pokemon("Nombre",HP,Atk,Def,SP.Atk,Sp.Def,Vel,Tipo1,Tipo2,Estado);
-        Pokemon Charmander = new Pokemon("Charmander",39,52,43,60,50,65,TipoPokemon.Fuego,TipoPokemon.Ninguno,Estados.Ninguno);
+        
+        Entrenador ash = new Entrenador("Ash");
+
+      
+        Pokemon Charmander = new charmander("Charmander", 39, 52, TipoPokemon.Fuego, Estados.Normal);
+        Pokemon Squirtle = new charmander("Squirtle", 44, 48, TipoPokemon.Agua, Estados.Normal);
+        ash.agregarPokemon(Charmander);
+        ash.agregarPokemon(Squirtle);
+
+      //
+        ash.mostrarPokemones();
+        
+          Batalla batalla = new Batalla();
+        batalla.iniciarBatalla(Charmander, Squirtle);
     }
 }
