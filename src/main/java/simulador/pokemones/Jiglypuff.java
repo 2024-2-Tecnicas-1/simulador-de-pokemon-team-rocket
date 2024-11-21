@@ -15,7 +15,19 @@ public class Jiglypuff extends Pokemon {
 
     
 
-    
+       @Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==30) {
+            setBsalud(140);
+            setBatkFis(40);
+            setBdefFis(105);
+            setBatkEsp(420);
+            setBdefEsp(105);
+            setNombre("Wigglytuff");
+            System.out.println("En hora buena, tu Jiglypuff ha evolucionado a "+this.nombre+"!");
+        }
+    }
 
 
 

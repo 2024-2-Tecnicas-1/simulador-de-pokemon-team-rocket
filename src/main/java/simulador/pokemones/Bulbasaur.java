@@ -14,7 +14,28 @@ public class Bulbasaur extends Pokemon {
     }
 
     
-
+@Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==16) {
+            setBsalud(60);
+            setBatkFis(62);
+            setBdefFis(63);
+            setBatkEsp(80);
+            setBdefEsp(80);
+            setNombre("Ivysaur");
+            System.out.println("En hora buena, tu Bulbasaur ha evolucionado a "+this.nombre+"!");
+        }
+        if (this.nivel==32) {
+           setBsalud(80);
+            setBatkFis(83);
+            setBdefFis(84);
+            setBatkEsp(100);
+            setBdefEsp(105);
+            setNombre("Venusaur");
+            System.out.println("En hora buena, tu Ivysaur ha evolucionado a "+this.nombre+"!"); 
+        }
+    }
     
 
 

@@ -14,7 +14,28 @@ public class Geodude extends Pokemon {
     }
 
     
-
+@Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==25) {
+            setBsalud(59);
+            setBatkFis(63);
+            setBdefFis(80);
+            setBatkEsp(65);
+            setBdefEsp(80);
+            setNombre("Graveler");
+            System.out.println("En hora buena, tu Geodude ha evolucionado a "+this.nombre+"!");
+        }
+        if (this.nivel==40) {
+           setBsalud(79);
+            setBatkFis(83);
+            setBdefFis(100);
+            setBatkEsp(85);
+            setBdefEsp(105);
+            setNombre("Golem");
+            System.out.println("En hora buena, tu Graveler ha evolucionado a "+this.nombre+"!"); 
+        }
+    }
     
 
 
