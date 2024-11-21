@@ -15,7 +15,7 @@ public class GestorBatallas {
         entrenadores = new ArrayList<>();
     }
 
-    public void mostrarMenuBatalla() {
+    public   void mostrarMenuPrincipal() {
         Scanner scanner = new Scanner(System.in);
         Batalla batalla = new Batalla();
         Pokemon entrenador1Pokemon = null;

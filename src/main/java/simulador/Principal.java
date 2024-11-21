@@ -1,18 +1,15 @@
 package simulador;
 
 import java.util.Scanner;
-import simulador.batalla.Batalla;
-import simulador.entrenador.Entrenador;
-import simulador.pokemon.*;
-import simulador.pokemones.*;
-
+import simulador.batalla.GestorBatallas;
+import simulador.entrenador.Entrenadores;
 
 public class Principal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-  
-        
-      
+        GestorBatallas gestorBatallas = new GestorBatallas(); 
+        Entrenadores entrenadores = new Entrenadores(); 
+
         boolean salir = false;
         while (!salir) {
             // Menú principal
@@ -23,18 +20,19 @@ public class Principal {
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             int opcion = sc.nextInt();
-            sc.nextLine();  // Consumir el salto de línea después del entero
+            sc.nextLine(); 
 
             switch (opcion) {
                 case 1:
                     // Gestionar batallas
                     System.out.println("Gestionando batallas...");
+                    gestorBatallas.mostrarMenuPrincipal();
                     break;
 
                 case 2:
                     // Gestionar entrenadores
                     System.out.println("Gestionando entrenadores...");
-                     Entrenadores.menuPrincipal();
+                    entrenadores.menuPrincipal(); 
                     break;
 
                 case 3:
@@ -54,4 +52,3 @@ public class Principal {
         }
     }
 }
-
