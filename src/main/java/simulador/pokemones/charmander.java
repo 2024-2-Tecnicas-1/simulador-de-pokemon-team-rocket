@@ -7,9 +7,9 @@ import simulador.pokemon.TipoPokemon;
  *
  
 @author Dylan*/
-public class Charmander extends Pokemon {
+public class charmander extends Pokemon {
 
-    public Charmander(String nombre, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2) {
+    public charmander(String nombre, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2) {
         super(nombre, bsalud, batkFis, batkEsp, bdefEsp, bdefFis, estado, tipo1, tipo2);
         
     }

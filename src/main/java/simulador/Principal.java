@@ -13,7 +13,7 @@ public class Principal {
         Entrenador ash = new Entrenador("Ash");
         
       //nombre salud ataqueF ataqueE defensaE defensaF estado tipo1 tipo2
-        Pokemon Charmander = new Charmander("Charmander",39,52,60,50,43,Estados.NORMAL,TipoPokemon.FUEGO,TipoPokemon.NINGUNO);
+        Pokemon Charmander = new charmander("Charmander",39,52,60,50,43,Estados.NORMAL,TipoPokemon.FUEGO,TipoPokemon.NINGUNO);
         Pokemon Abra = new Abra("Abra",25,20,105,55,15,Estados.NORMAL,TipoPokemon.PSIQUICO,TipoPokemon.NINGUNO);
         Pokemon Bulbasaur = new Bulbasaur("Bulbasaur",45,49,65,65,49,Estados.NORMAL,TipoPokemon.FUEGO,TipoPokemon.NINGUNO);
         Pokemon Geodude = new Geodude("Geodude",39,52,60,50,43,Estados.NORMAL,TipoPokemon.PLANTA,TipoPokemon.VENENO);
