@@ -35,7 +35,7 @@ public class Entrenador {
         for (Pokemon pokemon : pokemones.values()) {
             System.out.println("- " + pokemon.getNombre() + 
                 " (Salud: " + pokemon.getSalud() + 
-                ", Ataque: " + pokemon.getPuntosAtaque() + 
+                //", Ataque: " + pokemon.getPuntosAtaque() + 
                 ", Nivel: " + pokemon.getNivel() + 
                 ", Experiencia: " + pokemon.getExperiencia() + 
                 ", Estado: " + pokemon.getEstado() + ")");

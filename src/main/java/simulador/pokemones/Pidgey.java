@@ -9,9 +9,15 @@ import simulador.pokemon.TipoPokemon;
 @author Dylan*/
 public class Pidgey extends Pokemon {
 
-    public Pidgey(String nombre, int salud, int puntosAtaque, Estados estado, TipoPokemon tipo) {
-        super(nombre, salud, puntosAtaque, estado, tipo);
+    public Pidgey(String nombre, int salud, int atkFis, int atkEsp, int defEsp, int defFis, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2, String mote) {
+        super(nombre, salud, atkFis, atkEsp, defEsp, defFis, bsalud, batkFis, batkEsp, bdefEsp, bdefFis, estado, tipo1, tipo2, mote);
     }
+
+    public Pidgey(String mote) {
+        super(mote);
+    }
+
+    
 
 
 
@@ -26,7 +32,7 @@ public class Pidgey extends Pokemon {
 
     @Override
     public int atacar() {
-         return this.puntosAtaque;
+         return this.atkFis;
     }
 
     @Override

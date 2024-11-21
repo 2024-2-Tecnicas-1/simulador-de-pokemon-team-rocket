@@ -65,7 +65,7 @@ public class Batalla {
             int dañoPorQuemadura = Math.max(1, pokemon.getSalud() / 16); // Mínimo daño de 1
             pokemon.recibirDaño(dañoPorQuemadura);
             System.out.println(pokemon.getNombre() + " perdió " + dañoPorQuemadura + " puntos de salud debido a la quemadura.");
-            pokemon.setPuntosAtaque(pokemon.getPuntosAtaque() / 2); // Reducir ataque
+            //pokemon.setPuntosAtaque(pokemon.getPuntosAtaque() / 2); // Reducir ataque
             System.out.println(pokemon.getNombre() + " tiene ahora su ataque físico reducido.");
             break;
 
