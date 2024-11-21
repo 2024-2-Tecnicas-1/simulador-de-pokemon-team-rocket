@@ -15,7 +15,7 @@ import simulador.pokemon.Pokemon;
 import simulador.pokemon.TipoPokemon;
 import simulador.pokemones.Abra;
 import simulador.pokemones.Bulbasaur;
-import simulador.pokemones.Charmander;
+import simulador.pokemones.charmander;
 import simulador.pokemones.Geodude;
 import simulador.pokemones.Grimer;
 import simulador.pokemones.Jiglypuff;
@@ -165,7 +165,7 @@ public class Entrenadores {
 
                       switch (opcionPokemon) {
                       case 1:
-                      nuevoPokemon = new Charmander("Charmander", 39, 52, 60, 50, 43, Estados.NORMAL, TipoPokemon.FUEGO, TipoPokemon.NINGUNO);
+                      nuevoPokemon = new charmander("Charmander", 39, 52, 60, 50, 43, Estados.NORMAL, TipoPokemon.FUEGO, TipoPokemon.NINGUNO);
                       break;
                        case 2:
                        nuevoPokemon = new Squirtle("Squirtle", 44, 48, 50, 64, 65, Estados.NORMAL, TipoPokemon.AGUA, TipoPokemon.NINGUNO);
@@ -201,7 +201,7 @@ public class Entrenadores {
 
         if (nuevoPokemon != null) {
             entrenador.agregarPokemon(nuevoPokemon);
-            System.out.println(nuevoPokemon.getnombre() + " ha sido agregado al equipo de " + entrenador.getNombre());
+            System.out.println(nuevoPokemon.getNombre() + " ha sido agregado al equipo de " + entrenador.getNombre());
         }
     }
 
