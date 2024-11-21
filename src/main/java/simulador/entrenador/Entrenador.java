@@ -1,5 +1,6 @@
 package simulador.entrenador;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import simulador.pokemon.Pokemon;
 
@@ -14,11 +15,11 @@ public class Entrenador {
 
     // Agregar un Pokémon al equipo
    public void agregarPokemon(Pokemon pokemon) {
-    if (pokemones.containsKey(pokemon.getnombre())) {
-        System.out.println(pokemon.getnombre() + " ya está en el equipo.");
+    if (pokemones.containsKey(pokemon.getNombre())) {
+        System.out.println(pokemon.getNombre() + " ya está en el equipo.");
     } else {
-        pokemones.put(pokemon.getnombre(), pokemon);
-        System.out.println(pokemon.getnombre() + " ha sido añadido al equipo de " + nombre);
+        pokemones.put(pokemon.getNombre(), pokemon);
+        System.out.println(pokemon.getNombre() + " ha sido añadido al equipo de " + nombre);
     }
 }
     // Entrenar un Pokémon específico por nombre
@@ -40,11 +41,16 @@ public class Entrenador {
             System.out.println("Pokemon del equipo de " + nombre + ":");
             // Ahora recorremos el HashMap para obtener los valores (Pokémon)
             for (Pokemon pokemon : pokemones.values()) {
-                System.out.println("Nombre: " + pokemon.getnombre() + ", Nivel: " + pokemon.getNivel() + ", Salud: " + pokemon.getSalud() + "Ataque" + pokemon.getAtkFis());
+                System.out.println("Nombre: " + pokemon.getNombre() + ", Nivel: " + pokemon.getNivel() + ", Salud: " + pokemon.getSalud() + "Ataque" + pokemon.getAtkFis());
             }
         }
     }
     public String getNombre() {
         return nombre;
     }
+
+    public HashMap<String, Pokemon> getPokemones() {
+        return pokemones;
+    }
+    
 }
