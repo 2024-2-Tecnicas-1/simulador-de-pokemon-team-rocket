@@ -9,13 +9,11 @@ import simulador.pokemon.TipoPokemon;
 @author Dylan*/
 public class Pidgey extends Pokemon {
 
-    public Pidgey(String nombre, int salud, int atkFis, int atkEsp, int defEsp, int defFis, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2, String mote) {
-        super(nombre, salud, atkFis, atkEsp, defEsp, defFis, bsalud, batkFis, batkEsp, bdefEsp, bdefFis, estado, tipo1, tipo2, mote);
+    public Pidgey(String nombre, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2) {
+        super(nombre, bsalud, batkFis, batkEsp, bdefEsp, bdefFis, estado, tipo1, tipo2);
     }
 
-    public Pidgey(String mote) {
-        super(mote);
-    }
+    
 
     
 

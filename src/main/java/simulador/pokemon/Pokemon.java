@@ -4,7 +4,6 @@ import simulador.pokemon.Estados;
 
 public abstract class Pokemon {
     protected String nombre;
-    protected String mote;
     protected int salud;
     protected int atkFis;
     protected int atkEsp;
@@ -22,13 +21,8 @@ public abstract class Pokemon {
     protected int experiencia = 0;
     protected static final int ExpXLvl = 100;
 
-    public Pokemon(String nombre, int salud, int atkFis, int atkEsp, int defEsp, int defFis, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2, String mote) {
+    public Pokemon(String nombre, int bsalud, int batkFis, int batkEsp, int bdefEsp, int bdefFis, Estados estado, TipoPokemon tipo1, TipoPokemon tipo2) {
         this.nombre = nombre;
-        this.salud = salud;
-        this.atkFis = atkFis;
-        this.atkEsp = atkEsp;
-        this.defEsp = defEsp;
-        this.defFis = defFis;
         this.bsalud = bsalud;
         this.batkFis = batkFis;
         this.batkEsp = batkEsp;
@@ -37,12 +31,13 @@ public abstract class Pokemon {
         this.estado = estado;
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
-        this.mote = mote;
+        setAtkEsp();
+        setDefEsp();
+        setDefFis();
+        setAtkFis();
+        setSalud();
     }
-
-    public Pokemon(String mote) {
-        this.mote=mote;
-    }
+    
     private int turnosDormido = 0;
 
     // Getter del estado
@@ -70,7 +65,7 @@ public abstract class Pokemon {
         setDefFis();
         setAtkFis();
         setSalud();
-        System.out.println(nombre + " ha subido al nivel " + nivel + "! sus estadisticas han subido.");
+        System.out.println(this.nombre + " ha subido al nivel " + nivel + "! sus estadisticas han subido.");
     }
 
     // Setter del estado
@@ -117,12 +112,10 @@ public abstract class Pokemon {
     
 
     public void setBsalud(int bsalud) {
-        System.out.println(bsalud);
         this.bsalud = bsalud;
     }
 
     public void setBatkFis(int batkFis) {
-        System.out.println(batkFis);
         this.batkFis = batkFis;
     }
 
