@@ -41,4 +41,9 @@ public class Entrenador {
                 ", Estado: " + pokemon.getEstado() + ")");
         }
     }
+
+    public String getNombre() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNombre'");
+    }
 }
