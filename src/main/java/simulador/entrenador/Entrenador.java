@@ -34,17 +34,21 @@ public class Entrenador {
     }
 
     // Mostrar información de todos los Pokémon en el equipo
-   public void mostrarPokemones() {
-        if (pokemones.isEmpty()) {
-            System.out.println("El equipo de " + nombre + " está vacío.");
-        } else {
-            System.out.println("Pokemon del equipo de " + nombre + ":");
-            // Ahora recorremos el HashMap para obtener los valores (Pokémon)
-            for (Pokemon pokemon : pokemones.values()) {
-                System.out.println("Nombre: " + pokemon.getNombre() + ", Nivel: " + pokemon.getNivel() + ", Salud: " + pokemon.getSalud() + "Ataque" + pokemon.getAtkFis());
-            }
+public void mostrarPokemones() {
+    if (pokemones.isEmpty()) {
+        System.out.println("El equipo de " + nombre + " está vacío.");
+    } else {
+        System.out.println("Pokemon del equipo de " + nombre + ":");
+        
+        for (Pokemon pokemon : pokemones.values()) {
+            
+            System.out.println("Nombre: " + pokemon.getnombre() 
+                               + ", Nivel: " + pokemon.getNivel() 
+                               + ", Salud: " + pokemon.getSalud() 
+                               + ", Ataque: " + pokemon.getAtkFis());
         }
     }
+}
     public String getNombre() {
         return nombre;
     }
