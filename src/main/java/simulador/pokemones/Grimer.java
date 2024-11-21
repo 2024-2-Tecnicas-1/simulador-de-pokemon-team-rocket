@@ -15,7 +15,19 @@ public class Grimer extends Pokemon {
 
     
 
-    
+@Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==38) {
+            setBsalud(105);
+            setBatkFis(105);
+            setBdefFis(70);
+            setBatkEsp(65);
+            setBdefEsp(100);
+            setNombre("Muk");
+            System.out.println("En hora buena, tu Grimer ha evolucionado a "+this.nombre+"!");
+        }
+    }  
 
 
 

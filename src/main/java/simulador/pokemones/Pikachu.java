@@ -15,7 +15,19 @@ public class Pikachu extends Pokemon {
 
     
 
-    
+    @Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==20) {
+            setBsalud(60);
+            setBatkFis(90);
+            setBdefFis(55);
+            setBatkEsp(110);
+            setBdefEsp(80);
+            setNombre("Raichu");
+            System.out.println("En hora buena, tu Pikachu ha evolucionado a "+this.nombre+"!");
+        }
+    }
 
 
 

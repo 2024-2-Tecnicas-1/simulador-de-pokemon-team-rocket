@@ -15,7 +15,28 @@ public class Squirtle extends Pokemon {
 
     
 
-    
+    @Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==16) {
+            setBsalud(59);
+            setBatkFis(63);
+            setBdefFis(80);
+            setBatkEsp(65);
+            setBdefEsp(80);
+            setNombre("Wartortle");
+            System.out.println("En hora buena, tu Squirtle ha evolucionado a "+this.nombre+"!");
+        }
+        if (this.nivel==36) {
+           setBsalud(79);
+            setBatkFis(83);
+            setBdefFis(100);
+            setBatkEsp(85);
+            setBdefEsp(105);
+            setNombre("Blastoise");
+            System.out.println("En hora buena, tu Wartortle ha evolucionado a "+this.nombre+"!"); 
+        }
+    }
 
 
 

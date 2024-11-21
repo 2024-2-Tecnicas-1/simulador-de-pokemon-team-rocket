@@ -14,7 +14,28 @@ public class Pidgey extends Pokemon {
     }
 
     
-
+@Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==18) {
+            setBsalud(63);
+            setBatkFis(60);
+            setBdefFis(55);
+            setBatkEsp(50);
+            setBdefEsp(50);
+            setNombre("Pidgeotto");
+            System.out.println("En hora buena, tu Pidgey ha evolucionado a "+this.nombre+"!");
+        }
+        if (this.nivel==36) {
+           setBsalud(110);
+            setBatkFis(80);
+            setBdefFis(75);
+            setBatkEsp(70);
+            setBdefEsp(70);
+            setNombre("Pidgeot");
+            System.out.println("En hora buena, tu Pidgeotto ha evolucionado a "+this.nombre+"!"); 
+        }
+    }
     
 
 

@@ -26,17 +26,17 @@ public class Charmander extends Pokemon {
             setBatkEsp(80);
             setBdefEsp(65);
             setNombre("Charmeleon");
-            System.out.println("En hora buena, tu "+this.nombre+" ha evolucionado a "+this.nombre+"!");
+            System.out.println("En hora buena, tu Charmander ha evolucionado a "+this.nombre+"!");
         }
         if (this.nivel==36) {
-           setBsalud(58);
-            setBatkFis(64);
-            setBdefFis(58);
-            setBatkEsp(80);
-            setBdefEsp(65);
+           setBsalud(78);
+            setBatkFis(84);
+            setBdefFis(78);
+            setBatkEsp(109);
+            setBdefEsp(85);
             setTipo2(TipoPokemon.VOLADOR);
             setNombre("Charizard");
-            System.out.println("En hora buena, tu "+this.nombre+" ha evolucionado a "+this.nombre+"!"); 
+            System.out.println("En hora buena, tu Charmeleon ha evolucionado a "+this.nombre+"!"); 
         }
     }
 

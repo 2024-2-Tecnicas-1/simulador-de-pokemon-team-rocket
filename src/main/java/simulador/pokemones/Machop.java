@@ -14,7 +14,28 @@ public class Machop extends Pokemon {
     }
 
     
-
+@Override
+    public void subirNivel() {
+        super.subirNivel(); 
+        if (this.nivel==28) {
+            setBsalud(80);
+            setBatkFis(100);
+            setBdefFis(70);
+            setBatkEsp(50);
+            setBdefEsp(60);
+            setNombre("Machoke");
+            System.out.println("En hora buena, tu machop ha evolucionado a "+this.nombre+"!");
+        }
+        if (this.nivel==40) {
+           setBsalud(90);
+            setBatkFis(140);
+            setBdefFis(80);
+            setBatkEsp(66);
+            setBdefEsp(85);
+            setNombre("Machamp");
+            System.out.println("En hora buena, tu Machoke ha evolucionado a "+this.nombre+"!"); 
+        }
+    }
     
 
 
