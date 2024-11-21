@@ -13,11 +13,14 @@ public class Entrenador {
     }
 
     // Agregar un Pokémon al equipo
-    public void agregarPokemon(Pokemon pokemon) {
-        pokemones.put(pokemon.getNombre(), pokemon);
-        System.out.println(pokemon.getNombre() + " ha sido añadido al equipo de " + nombre);
+   public void agregarPokemon(Pokemon pokemon) {
+    if (pokemones.containsKey(pokemon.getnombre())) {
+        System.out.println(pokemon.getnombre() + " ya está en el equipo.");
+    } else {
+        pokemones.put(pokemon.getnombre(), pokemon);
+        System.out.println(pokemon.getnombre() + " ha sido añadido al equipo de " + nombre);
     }
-
+}
     // Entrenar un Pokémon específico por nombre
     public void entrenarPokemon(String nombrePokemon) {
         Pokemon pokemon = pokemones.get(nombrePokemon);
@@ -30,20 +33,18 @@ public class Entrenador {
     }
 
     // Mostrar información de todos los Pokémon en el equipo
-    public void mostrarPokemones() {
-        System.out.println("Equipo de " + nombre + ":");
-        for (Pokemon pokemon : pokemones.values()) {
-            System.out.println("- " + pokemon.getNombre() + 
-                " (Salud: " + pokemon.getSalud() + 
-                //", Ataque: " + pokemon.getPuntosAtaque() + 
-                ", Nivel: " + pokemon.getNivel() + 
-                ", Experiencia: " + pokemon.getExperiencia() + 
-                ", Estado: " + pokemon.getEstado() + ")");
+   public void mostrarPokemones() {
+        if (pokemones.isEmpty()) {
+            System.out.println("El equipo de " + nombre + " está vacío.");
+        } else {
+            System.out.println("Pokemon del equipo de " + nombre + ":");
+            // Ahora recorremos el HashMap para obtener los valores (Pokémon)
+            for (Pokemon pokemon : pokemones.values()) {
+                System.out.println("Nombre: " + pokemon.getnombre() + ", Nivel: " + pokemon.getNivel() + ", Salud: " + pokemon.getSalud() + "Ataque" + pokemon.getAtkFis());
+            }
         }
     }
-
     public String getNombre() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getNombre'");
+        return nombre;
     }
 }
