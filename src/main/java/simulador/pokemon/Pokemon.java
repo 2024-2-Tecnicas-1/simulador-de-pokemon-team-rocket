@@ -7,7 +7,11 @@ public abstract class Pokemon {
     public  int salud;
     public int puntosAtaque;
     public Estados estado;
-      public TipoPokemon tipo;
+    public TipoPokemon tipo;
+    public int nivel = 1;
+    public int experiencia = 0;
+    public static final int ExpXLvl = 100;
+
 
 
     public Pokemon(String nombre, int salud, int puntosAtaque, Estados estado, TipoPokemon tipo) {
@@ -22,6 +26,26 @@ public abstract class Pokemon {
     // Getter del estado
     public Estados getEstado() {
         return estado;
+    }
+    public int getNivel() {
+        return nivel;
+    }
+    public int getExperiencia(){
+        return experiencia;
+    }
+    public void entrenarPokemon(){
+        experiencia += 20;
+        System.out.println(nombre + " ha ganado 20 puntos de experiencia");
+        if ( experiencia >= ExpXLvl) {
+            subirNivel();
+        }
+    }
+    public void subirNivel () {
+        experiencia -= ExpXLvl;
+        nivel++;
+        salud += 10; // Mejora básica por nivel
+        puntosAtaque += 5; // Mejora básica por nivel
+        System.out.println(nombre + " ha subido al nivel " + nivel + "! Salud y ataque mejorados.");
     }
 
     // Setter del estado
